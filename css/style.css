@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+body{
+    background-color: #474444;
+}
+.pspan{
+    font-family: 'Roboto', sans-serif;;
+    font-size: 6em;
+    font-weight: 900;
+    padding-left: 200px;
+    color: #fff;
+    padding-left: 200px;
+    display: block;
+    padding-top: 60px;
+}
+.pspan > span:not(.pspan >span:first-child):hover{
+    /* Step */
+    color: #05FDD8;
+    transform: scale(2,2);
+}
+.pspan > span:first-child{
+    color: #FD2155;
+    text-shadow: -9px 1px 0 #05FDD8; /* text shadow: h- shadow v-shadow blur radius color|None|Initial|Inherit;*/
+    animation-play-state: paused;
+}
+.pspan > span{
+    /* Step1 */
+    float: left;
+    transition: all 0.3s cubic-bezier(0,1.95,1,-1.90);
+    transform: scale(1,1);
+}

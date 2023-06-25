@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BATCH-1 LECTURE-66 JACK JIGGLE EFFECT</title>
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/style3.css">
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form class="myform" onsubmit="return mySubmit()">
+        <table cellspacing="10" cellpadding="10">
+            <tr>
+                <td>
+                    <input type="text" name="fname" placeholder="Name">
+                   <span class="error error_fname"></span>
+                </td>
+                <td>
+                    <input type="email" name="email" placeholder="Email" id="email">
+                    <span class="error error_email"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="text" data-sub="message" name="subject" placeholder="Subject">
+                    <span class="error error_subject"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea name="message" placeholder="Message" style="color: white;"></textarea>
+                    <span class="error error_message"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="submit" value="send message!" style="float: right; color: black; height: 40px;">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div class="banner">
+        <img style="width: 200px;" class="img1" src="./img/1.png">
+        <span class="pspan">
+            <span>J</span>
+            <span>a</span>
+            <span>c</span>
+            <span>k</span>
+    </div>
+
+    <script>
+        // 1. Function Defination
+        function mySubmit(){
+            //Access the Dom element
+            var n = document.querySelector('input[name="fname"]').value;
+            var e = document.getElementById('email').value
+            var s = document.querySelector('[data-sub="message"]').value;
+            var m = document.querySelector('form textarea').value;
+
+            if (n == ''){
+                document.querySelector('.error_fname').innerHTML = 'Please enter Your Name';
+                document.querySelector('.error_email').innerHTML = 'Please enter Your Email';
+                document.querySelector('.error_subject').innerHTML = 'Please enter Your Subject';
+                document.querySelector('.error_message').innerHTML = 'Please enter Your Message';
+            }
+            
+            //alert(n);
+           // alert(e);
+            //alert(s);
+           // alert(m);
+            return false;
+        }
+            
+    </script>
+</body>
+</html>

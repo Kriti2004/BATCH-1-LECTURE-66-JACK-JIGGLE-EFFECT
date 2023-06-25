@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(74, 73, 73);
+}
+.myform table{
+    width: 50% !important;
+}
+.myform input:not(.myform input[type="submit" ]),.myform textarea{
+    background-color: #2B2B2B;
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+}
+.myform input:focus, .myform textarea:focus{
+   outline: none;
+}
+input::placeholder{
+    color: #fff;
+}
+input{
+    color: white;
+}

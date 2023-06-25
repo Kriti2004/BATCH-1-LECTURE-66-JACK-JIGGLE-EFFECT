@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+body{
+    background-color: #474444;
+}
+.pspan{
+    font-family: 'Roboto', sans-serif;;
+    font-size: 6em;
+    font-weight: 900;
+    padding-left: 200px;
+    color: #fff;
+    padding-left: 200px;
+    display: block;
+    padding-top: 60px;
+    clear: both;
+}
+.pspan > span:not(.pspan >span:first-child):hover{
+    /* Step 2 */
+    color: #05FDD8;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+}
+.pspan > span{
+    /* Step1 */
+    float: left;
+    transition: all 0.3s linear;
+    transform: scale(1,1);
+}
+.pspan > span:first-child{
+    color: #FD2155;
+    text-shadow: -9px 1px 0 #05FDD8; /* text shadow: h- shadow v-shadow blur radius color|None|Initial|Inherit;*/
+    animation-play-state: paused;
+    
+}
+.pspan > span:not(.pspan >span:first-child){
+    animation-name: jiggle;
+    animation-timing-function: cubic-bezier(0,.86,1,-1.25);
+    animation-duration: 1s;
+    animation-play-state: paused;
+    animation-duration: 1s;
+}
+.img1{
+    position: fixed;
+    top: 50px;
+    right: 0px;
+    width: 30px;
+}
+@keyframes jiggle{
+    0%{
+        transform: scale(1,1);
+    }
+    25%{
+        transform: scale(1.5,0.5);
+    }
+    50%{
+        transform: scale(0.5,1.5);
+    }
+    75%{
+        transform: scale(0.5,1.5);
+    }
+    100%{
+        transform: scale(1.75,0.25);
+    }
+}
